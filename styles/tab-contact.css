@@ -54,6 +54,17 @@
         
       }
 
+      .subscribe-box-input--contact {
+        padding: 1em;
+        width: 80%;
+        margin-left: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: block;
+        min-height: 5em;
+        
+      }
+
       
       .subscribe-box-input--submit {
         padding: 0.4em;

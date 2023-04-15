@@ -2,9 +2,10 @@
 
 
   <div class='subscribe-box'>
-    <form id="contact-msgform" action="./service.html" method="post" target="dummyframe">
+    <form id="contact-msgform" action="./services/submit.php" method="post" target="dummyframe">
       <h1 class='subcribe-box-title'> Subscribe to My Mailing List </h1>
-      <input class='subscribe-box-input subscribe-box-input--email' type="email" id="contact-input" name="contact-input" placeholder="Your Email" required=""/>
+      <textarea class="subscribe-box-input subscribe-box-input--contact" type="text" id="contact-content" name="contact-content" placeholder="" required=""></textarea>
+      <input class='subscribe-box-input subscribe-box-input--email' type="email" id="contact-email" name="contact-email" placeholder="Your Email" required=""/>
       <input class='subscribe-box-input subscribe-box-input--submit' type="submit" value="Submit"/>
     </form>
   </div>
