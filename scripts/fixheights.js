@@ -14,26 +14,27 @@ function getActualHeight (elem) {
     + (parseFloat(styles.marginTop)
       + parseFloat(styles.marginBottom))/2;
 }
-
-let articleContentArr = Array.from(document.getElementsByClassName('article-content'));
-articleContentArr.forEach((content) => {
-  let newDiv = document.createElement("div");
-  Array.from(content.children).forEach ((childNode) => {
-    newDiv.appendChild(childNode);
+document.addEventListener("DOMContentLoaded", () =>{
+  let articleContentArr = Array.from(document.getElementsByClassName('article-content'));
+  articleContentArr.forEach((content) => {
+    let newDiv = document.createElement("div");
+    Array.from(content.children).forEach ((childNode) => {
+      newDiv.appendChild(childNode);
+    });
+    content.appendChild(newDiv);
+    content.style.setProperty('height', getActualHeight(content.children[0])+'px');
   });
-  content.appendChild(newDiv);
-  content.style.setProperty('height', getActualHeight(content.children[0])+'px');
-});
 
-let articleTitleArr = Array.from(document.getElementsByClassName('article-title'));
-articleTitleArr.forEach((elem) => {
-  let articleContent = elem.nextElementSibling;
-  elem.addEventListener('click', () => {
-    if (elem.previousElementSibling.checked) {
-      elem.nextElementSibling.style.setProperty('height', 0);
-    } else {
-      elem.nextElementSibling.style.setProperty('height', 
-      getActualHeight(articleContent.children[0])+'px');
-    }
+  let articleTitleArr = Array.from(document.getElementsByClassName('article-title'));
+  articleTitleArr.forEach((elem) => {
+    let articleContent = elem.nextElementSibling;
+    elem.addEventListener('click', () => {
+      if (elem.previousElementSibling.checked) {
+        elem.nextElementSibling.style.setProperty('height', 0);
+      } else {
+        elem.nextElementSibling.style.setProperty('height', 
+        getActualHeight(articleContent.children[0])+'px');
+      }
+    });
   });
 });

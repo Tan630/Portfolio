@@ -67,7 +67,9 @@ footer{
 
     border-radius: 0.2em;
     transition: background-color 0.2s;
-    transform-style: preserve-3d;
+    /*transform-style: preserve-3d;*/ /*This line of code somehow causes the child
+        to disappear after rotation, from time to time.
+        The reason for this is not known, but removing it does the trick. */
 }
 
 .ico { 
