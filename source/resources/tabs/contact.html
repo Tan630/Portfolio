@@ -3,22 +3,22 @@
 
   <div class='subscribe-box'>
     <form id="contact-msgform" action="./services/submit.php" method="post" target="dummyframe">
-      <h1 class='subcribe-box-title'> Subscribe to My Mailing List </h1>
+      <h1 class='subcribe-box-title' id="contact-header"> Subscribe to My Mailing List </h1>
       <textarea class="subscribe-box-input subscribe-box-input--contact" type="text" id="contact-content" name="contact-content" placeholder="" required=""></textarea>
       <input class='subscribe-box-input subscribe-box-input--email' type="email" id="contact-email" name="contact-email" placeholder="Your Email" required=""/>
-      <input class='subscribe-box-input subscribe-box-input--submit' type="submit" value="Submit"/>
+      <input class='subscribe-box-input subscribe-box-input--submit' type="submit" id="contact-submit" value="Submit"/>
     </form>
   </div>
   
-  
+
   
   <div class='contact-box'>
     <h2>You can reach me in the following ways:</h2>
     <ul class='contact-list'>
-      <li class='contact-list__item contact-list__item--phone'> Tel: ...</li>
-      <li class='contact-list__item contact-list__item--fax'> Fax: ...</li>
-      <li class='contact-list__item contact-list__item--email'> Email: ...</li>
-      <li class='contact-list__item contact-list__item--mail'> Mail: ...</li>
+      <li class='contact-list__item contact-list__item--phone'> Phone: <a href="tel:000-000-0000">(000)-000-0000</a></li>
+      <li class='contact-list__item contact-list__item--fax'> Fax: <a href="fax:000-000-0000">(000)-000-0000</a></li>
+      <li class='contact-list__item contact-list__item--email'> Email: <a href="mailto:default@example.com">default@example.com</a></li>
+      <li class='contact-list__item contact-list__item--mail'> Mail: 000 Example Rd., Kingston, ON</li>
     </ul>
   </div>
   <iframe class='contact-interceptor' title="dummy element that intercepts outgoing requests" name="dummyframe"></iframe>

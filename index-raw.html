@@ -26,22 +26,23 @@
 
 
   <div class="subscribe-box">
-    <form id="contact-msgform" action="./service.html" method="post" target="dummyframe">
-      <h1 class="subcribe-box-title"> Subscribe to My Mailing List </h1>
-      <input class="subscribe-box-input subscribe-box-input--email" type="email" id="contact-input" name="contact-input" placeholder="Your Email" required=""></input>
-      <input class="subscribe-box-input subscribe-box-input--submit" type="submit" value="Submit"></input>
+    <form id="contact-msgform" action="./services/submit.php" method="post" target="dummyframe">
+      <h1 class="subcribe-box-title" id="contact-header"> Subscribe to My Mailing List </h1>
+      <textarea class="subscribe-box-input subscribe-box-input--contact" type="text" id="contact-content" name="contact-content" placeholder="" required=""></textarea>
+      <input class="subscribe-box-input subscribe-box-input--email" type="email" id="contact-email" name="contact-email" placeholder="Your Email" required=""></input>
+      <input class="subscribe-box-input subscribe-box-input--submit" type="submit" id="contact-submit" value="Submit"></input>
     </form>
   </div>
   
-  
+
   
   <div class="contact-box">
     <h2>You can reach me in the following ways:</h2>
     <ul class="contact-list">
-      <li class="contact-list__item contact-list__item--phone"> Tel: ...</li>
-      <li class="contact-list__item contact-list__item--fax"> Fax: ...</li>
-      <li class="contact-list__item contact-list__item--email"> Email: ...</li>
-      <li class="contact-list__item contact-list__item--mail"> Mail: ...</li>
+      <li class="contact-list__item contact-list__item--phone"> Phone: <a href="tel:000-000-0000">(000)-000-0000</a></li>
+      <li class="contact-list__item contact-list__item--fax"> Fax: <a href="fax:000-000-0000">(000)-000-0000</a></li>
+      <li class="contact-list__item contact-list__item--email"> Email: <a href="mailto:default@example.com">default@example.com</a></li>
+      <li class="contact-list__item contact-list__item--mail"> Mail: 000 Example Rd., Kingston, ON</li>
     </ul>
   </div>
   <iframe class="contact-interceptor" title="dummy element that intercepts outgoing requests" name="dummyframe"></iframe></div></main><main class="tab f-container" id="tabPortfolio"><nav class="s-tab-bar tab-bar f-row" aria-label="Top Navigation Tabs, Expanded"><div class="ico-container">&#xD;
@@ -245,5 +246,5 @@
   <footer class="content-box">&#xD;
   email: ...&#xD;
   phone: ...&#xD;
-</footer><script src="./scripts/common.js"></script><script src="./scripts/droplist.js"></script><script src="./scripts/fixheights.js"></script><script src="./scripts/synctabs.js"></script></label>&#xD;
+</footer><script src="./scripts/common.js"></script><script src="./scripts/droplist.js"></script><script src="./scripts/fixheights.js"></script><script src="./scripts/synctabs.js"></script><script src="./scripts/submit.js"></script></label>&#xD;
 </body></html>

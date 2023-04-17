@@ -6,7 +6,7 @@ define('ROOTPATH', __DIR__."/..");
 function logEmail(string $user = "Anonymous", string $content = ""): void {
     $time = gmdate("Y-m-d, H:i:s");
     file_put_contents(
-        ROOTPATH . "/logs/emails.php",
+        ROOTPATH . "/logs/emails.log",
         "$time | $user wrote: $content\n",
         FILE_APPEND
     );
@@ -21,17 +21,21 @@ function isValidContent(?string $mif): bool {
 }
 
 # --- Output Below ---
-$user = $_REQUEST["cemail"];
-$message = $_REQUEST["ccontent"];
+$user = urldecode($_REQUEST["cemail"]);
+$message = urldecode($_REQUEST["ccontent"]);
 $faviconPath = ROOTPATH . "/media/favicon.svg";
-if (isValidUserName($user) and isValidContent($message)) {
+if (isValidUserName($user) && isValidContent($message)) {
     logEmail((is_null($user)) ? "Anonymous":$user
-    , (is_null($message)) ? "Nothing":$message);
+           , (is_null($message)) ? "Nothing":$message);
     echo "Request Successful!";
 } else {
     http_response_code(500);
-    echo "Malformed input detected";
+    echo "Malformed input detected; caused by: $user, $message";
 }
+
+
+
+
 
 
 #logEmail(implode(array_keys($_REQUEST)), !is_null($ccontent) ?: 'nothing');
